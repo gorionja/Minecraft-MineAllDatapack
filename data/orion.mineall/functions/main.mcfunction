@@ -1,5 +1,15 @@
-# main
-execute run function orion.mineall:set_score
-execute run function orion.mineall:proc
-execute in minecraft:the_nether run function orion.mineall:proc
-execute run function orion.mineall:post
+# ------------------------------------------------------------- #
+# main.mcfunction
+# author:orion
+# ------------------------------------------------------------- #
+#tellraw @a [{"text":"[debug] main","italic":true,"color":"red"}]
+
+### ツルハシ使用検知
+execute as @a[scores={MAD_UsedWPAxe=1..}] at @s run function orion.mineall:run
+execute as @a[scores={MAD_UsedSPAxe=1..}] at @s run function orion.mineall:run
+execute as @a[scores={MAD_UsedIPAxe=1..}] at @s run function orion.mineall:run
+execute as @a[scores={MAD_UsedGPAxe=1..}] at @s run function orion.mineall:run
+execute as @a[scores={MAD_UsedDPAxe=1..}] at @s run function orion.mineall:run
+
+### スニーク時間をリセット
+scoreboard players set @a MAD_SneakTime 0
