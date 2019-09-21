@@ -6,4 +6,4 @@
 
 execute if score iron_ore MAD_InfDestFlg matches 1 run scoreboard players set iron_ore MAD_InfDestFlg 0
 tellraw @s [{"text":"値を変更しました。","color":"dark_gray"}]
-function orion.mineall:settings_infinit_destroy_flag
+function orion.mineall:_settings/settings_infinit_destroy_flag

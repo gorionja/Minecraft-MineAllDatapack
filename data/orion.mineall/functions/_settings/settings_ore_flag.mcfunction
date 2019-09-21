@@ -3,7 +3,7 @@
 # author:orion
 # ------------------------------------------------------------- #
 #tellraw @a [{"text":"[debug] settings_ore_flag","italic":true,"color":"red"}]
-tellraw @s ["",{"text":"[<- back]" ,"color":"blue","clickEvent":{"action":"run_command","value":"/function orion.mineall:settings"}},{"text":"                 鉱石ブロックの設定"}]
+tellraw @s ["",{"text":"[<- back]" ,"color":"blue","clickEvent":{"action":"run_command","value":"/function orion.mineall:_settings/settings"}},{"text":"                 鉱石ブロックの設定"}]
 tellraw @s [{"text":"ONのブロックは鉱石ブロックとしてデータパック内で処理されます。\n","color":"gray"}]
 
 execute if score stone MAD_OreFlg matches 1 run tellraw @s ["",{"text":"[On] 〇 ","color":"green","clickEvent":{"action":"run_command","value":"/function orion.mineall:stone/settings_ore_flag_on"}},{"text":" "},{"text":"[Off]    ","color":"red","clickEvent":{"action":"run_command","value":"/function orion.mineall:stone/settings_ore_flag_off"}},{"text":"石"}]

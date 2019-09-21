@@ -6,4 +6,4 @@
 
 execute if score iron_ore MAD_OreFlg matches 1 run scoreboard players set iron_ore MAD_OreFlg 0
 tellraw @s [{"text":"値を変更しました。","color":"dark_gray"}]
-function orion.mineall:settings_ore_flag
+function orion.mineall:_settings/settings_ore_flag

@@ -5,7 +5,7 @@
 #tellraw @a [{"text":"[debug] init","italic":true,"color":"red"}]
 
 ### ロード時コメント
-tellraw @a ["",{"text":"MineAll loaded. ","italic":true,"color":"green"},{"text":"[Click]","color":"blue","clickEvent":{"action":"run_command","value":"/function orion.mineall:settings"}},{"text":" Open Settings"}]
+tellraw @a ["",{"text":"MineAll loaded. ","italic":true,"color":"green"},{"text":"[Click]","color":"blue","clickEvent":{"action":"run_command","value":"/function orion.mineall:_settings/settings"}},{"text":" Open Settings"}]
 
 ### スコアボード作成
 scoreboard objectives add MAD_UsedWPAxe minecraft.used:minecraft.wooden_pickaxe
