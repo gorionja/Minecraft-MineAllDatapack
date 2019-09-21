@@ -1,8 +1,8 @@
 # ------------------------------------------------------------- #
-# redstone_ore/destroy.mcfunction
+# gold_ore/destroy.mcfunction
 # author:orion
 # ------------------------------------------------------------- #
-#tellraw @a [{"text":"[debug] redstone_ore/destroy","italic":true,"color":"red"}]
+#tellraw @a [{"text":"[debug] gold_ore/destroy","italic":true,"color":"red"}]
 
 # エンチャント "耐久力"のための乱数取得用アマスタ召喚
 execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{lvl:1,id:"minecraft:unbreaking"}]}}}] run function orion.mineall:if_use_unbreaking_lv1
@@ -15,6 +15,7 @@ scoreboard players set @s MAD_Random 0
 
 scoreboard players add current_block_size MAD_Setting 1
 
-setblock ~ ~ ~ minecraft:air destroy
+setblock ~ ~ ~ minecraft:air replace
+summon minecraft:item ~ ~ ~ {Motion:[0.0d,0.2d,0.0d],Item:{id:"minecraft:gold_ore",Count:1}}
 
-execute if score redstone_ore MAD_InfDestFlg matches 1 run function orion.mineall:redstone_ore/detect_next_block
+execute if score gold_ore MAD_InfDestFlg matches 1 run function orion.mineall:gold_ore/detect_next_block_silk
