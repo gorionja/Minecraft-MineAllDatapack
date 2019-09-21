@@ -35,6 +35,9 @@ execute if score first_time MAD_Setting matches 0 run scoreboard players set ana
 ### 鉱石限定フラグの設定（OFF:0,ON:1,デフォルトはOFF）
 execute if score first_time MAD_Setting matches 0 run scoreboard players set limit_ore_flg MAD_Setting 0
 
+### 自動アイテム収集フラグの設定（OFF:0,ON:1,デフォルトはOFF）
+execute if score first_time MAD_Setting matches 0 run scoreboard players set gathering_items MAD_Setting 0
+
 ### 鉱石フラグの設定
 execute if score first_time MAD_Setting matches 0 run scoreboard players set andesite MAD_OreFlg 0
 execute if score first_time MAD_Setting matches 0 run scoreboard players set cobblestone MAD_OreFlg 0

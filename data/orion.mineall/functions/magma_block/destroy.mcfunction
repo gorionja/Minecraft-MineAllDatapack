@@ -17,4 +17,9 @@ scoreboard players add current_block_size MAD_Setting 1
 
 setblock ~ ~ ~ minecraft:air destroy
 
+# 自動アイテム収集
+execute if score gathering_items MAD_Setting matches 1 positioned ~ ~ ~ if entity @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:magma_block"}},limit=1] run tag @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:magma_block"}}] add gathering
+execute if score gathering_items MAD_Setting matches 1 run tp @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:magma_block"}},tag=gathering] @s
+execute if score gathering_items MAD_Setting matches 1 run tag @a remove gathering
+
 execute if score magma_block MAD_InfDestFlg matches 1 run function orion.mineall:magma_block/detect_next_block

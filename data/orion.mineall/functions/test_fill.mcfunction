@@ -1,3 +1,6 @@
+give @p minecraft:diamond_pickaxe 1
+give @p minecraft:diamond_pickaxe{Enchantments:[{id:"minecraft:silk_touch",lvl:1}]} 1
+
 execute as @s run fill ~ ~ ~ ~5 ~5 ~5 andesite replace
 execute as @s positioned ~5 ~ ~ run fill ~ ~ ~ ~5 ~5 ~5 coal_ore replace
 execute as @s positioned ~10 ~ ~ run fill ~ ~ ~ ~5 ~5 ~5 cobblestone replace

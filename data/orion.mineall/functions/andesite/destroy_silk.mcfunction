@@ -18,4 +18,9 @@ scoreboard players add current_block_size MAD_Setting 1
 setblock ~ ~ ~ minecraft:air replace
 summon minecraft:item ~ ~ ~ {Motion:[0.0d,0.2d,0.0d],Item:{id:"minecraft:andesite",Count:1}}
 
+# 自動アイテム収集
+execute if score gathering_items MAD_Setting matches 1 positioned ~ ~ ~ if entity @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:andesite"}},limit=1] run tag @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:andesite"}}] add gathering
+execute if score gathering_items MAD_Setting matches 1 run tp @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:andesite"}},tag=gathering] @s
+execute if score gathering_items MAD_Setting matches 1 run tag @a remove gathering
+
 execute if score andesite MAD_InfDestFlg matches 1 run function orion.mineall:andesite/detect_next_block_silk
