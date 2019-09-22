@@ -21,6 +21,7 @@ scoreboard objectives add MAD_Random dummy
 scoreboard objectives add MAD_Coordinate dummy
 scoreboard objectives add MAD_InfDestFlg dummy
 scoreboard objectives add MAD_OreFlg dummy
+scoreboard objectives add MAD_Fortune dummy
 
 ### ツール耐久度の減少フラグ（0:OFF 1:ON<デフォルト>）
 ### ONにすると破壊したブロックの数だけツール耐久度が減少するようになる。
@@ -78,5 +79,47 @@ execute if score first_time MAD_Setting matches 0 run scoreboard players set red
 
 ### 初回読み込みのフラグ
 execute if score first_time MAD_Setting matches 0 run scoreboard players set first_time MAD_Setting 1
+
+### インベントリ情報
+# scoreboard objectives add MAD_Inventory dummy
+# scoreboard objectives add MAD_InvtryArry dummy
+# scoreboard players set null MAD_InvtryArry 0
+# scoreboard players set exist_slot MAD_Setting 1
+
+### エンチャント "幸運"のドロップ数設定
+scoreboard players set glowstone_lv0_2 MAD_Fortune 1
+scoreboard players set glowstone_lv0_3 MAD_Fortune 2
+scoreboard players set glowstone_lv0_4 MAD_Fortune 3
+scoreboard players set glowstone_lv1_2 MAD_Fortune 1
+scoreboard players set glowstone_lv1_3 MAD_Fortune 3
+scoreboard players set glowstone_lv1_4 MAD_Fortune 6
+scoreboard players set glowstone_lv2_2 MAD_Fortune 1
+scoreboard players set glowstone_lv2_3 MAD_Fortune 3
+scoreboard players set glowstone_lv2_4 MAD_Fortune 9
+scoreboard players set glowstone_lv3_2 MAD_Fortune 1
+scoreboard players set glowstone_lv3_3 MAD_Fortune 3
+scoreboard players set glowstone_lv3_4 MAD_Fortune 12
+scoreboard players set redstone_lv0_4 MAD_Fortune 1
+scoreboard players set redstone_lv0_5 MAD_Fortune 2
+scoreboard players set redstone_lv1_4 MAD_Fortune 1
+scoreboard players set redstone_lv1_5 MAD_Fortune 3
+scoreboard players set redstone_lv1_6 MAD_Fortune 4
+scoreboard players set redstone_lv2_4 MAD_Fortune 1
+scoreboard players set redstone_lv2_5 MAD_Fortune 3
+scoreboard players set redstone_lv2_6 MAD_Fortune 5
+scoreboard players set redstone_lv2_7 MAD_Fortune 6
+scoreboard players set redstone_lv3_4 MAD_Fortune 1
+scoreboard players set redstone_lv3_5 MAD_Fortune 3
+scoreboard players set redstone_lv3_6 MAD_Fortune 5
+scoreboard players set redstone_lv3_7 MAD_Fortune 7
+scoreboard players set redstone_lv3_8 MAD_Fortune 8
+scoreboard players set ore_lv0_1 MAD_Fortune 1
+scoreboard players set ore_lv1_2 MAD_Fortune 3
+scoreboard players set ore_lv2_2 MAD_Fortune 3
+scoreboard players set ore_lv2_3 MAD_Fortune 4
+scoreboard players set ore_lv3_2 MAD_Fortune 3
+scoreboard players set ore_lv3_3 MAD_Fortune 4
+scoreboard players set ore_lv3_4 MAD_Fortune 5
+scoreboard players set drop_count MAD_Fortune 1
 
 gamerule sendCommandFeedback true

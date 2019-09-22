@@ -20,5 +20,14 @@ execute store result entity @s SelectedItem.tag.Damage short 1 run scoreboard pl
 kill @e[name=Unbreaking_randomizer_lv1]
 kill @e[name=Unbreaking_randomizer_lv2]
 kill @e[name=Unbreaking_randomizer_lv3]
-
-#function orion.mineall:test_fill
+kill @e[name=fortune_randomizer_lv1]
+kill @e[name=fortune_randomizer_lv2]
+kill @e[name=fortune_randomizer_lv3]
+kill @e[name=fortune_randomizer_lv0_glowstone]
+kill @e[name=fortune_randomizer_lv1_glowstone]
+kill @e[name=fortune_randomizer_lv2_glowstone]
+kill @e[name=fortune_randomizer_lv3_glowstone]
+kill @e[name=fortune_randomizer_lv0_redstone]
+kill @e[name=fortune_randomizer_lv1_redstone]
+kill @e[name=fortune_randomizer_lv2_redstone]
+kill @e[name=fortune_randomizer_lv3_redstone]
