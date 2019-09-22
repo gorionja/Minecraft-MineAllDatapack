@@ -30,7 +30,7 @@ execute if score first_time MAD_Setting matches 0 run scoreboard players set dec
 execute if score first_time MAD_Setting matches 0 run scoreboard players set max_block_size MAD_Setting 100
 
 ### 下方ブロック破壊の設定（0:OFF<デフォルト> 1:ON）
-execute if score first_time MAD_Setting matches 0 run scoreboard players set anable_under_block MAD_Setting 0
+execute if score first_time MAD_Setting matches 0 run scoreboard players set enable_under_block MAD_Setting 0
 
 ### 鉱石限定フラグの設定（OFF:0,ON:1,デフォルトはOFF）
 execute if score first_time MAD_Setting matches 0 run scoreboard players set limit_ore_flg MAD_Setting 0
