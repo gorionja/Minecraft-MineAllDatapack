@@ -12,3 +12,4 @@ summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Health:4.0f,CustomName:"{\"text
 summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Health:5.0f,CustomName:"{\"text\":\"fortune_randomizer_lv2_redstone\"}"}
 summon armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Health:6.0f,CustomName:"{\"text\":\"fortune_randomizer_lv2_redstone\"}"}
 execute store result score @s MAD_Random run data get entity @e[name=fortune_randomizer_lv2_redstone,limit=1,sort=random] Health
+kill @e[name=fortune_randomizer_lv2_redstone]
