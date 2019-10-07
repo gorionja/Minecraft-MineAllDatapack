@@ -8,10 +8,10 @@
 execute store result score @s MAD_Durability run data get entity @s SelectedItem.tag.Damage
 
 # シルクタッチ付きのツールを使用した場合
-execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{lvl:1,id:"minecraft:silk_touch"}]}}}] run function orion.mineall:run_silk
+execute if entity @s[nbt={SelectedItem:{tag:{Enchantments:[{lvl:1s,id:"minecraft:silk_touch"}]}}}] run function orion.mineall:run_silk
 
 # シルクタッチ付きのツールを使用していない場合
-execute unless entity @s[nbt={SelectedItem:{tag:{Enchantments:[{lvl:1,id:"minecraft:silk_touch"}]}}}] run function orion.mineall:run
+execute unless entity @s[nbt={SelectedItem:{tag:{Enchantments:[{lvl:1s,id:"minecraft:silk_touch"}]}}}] run function orion.mineall:run
 
 # 現在のスコアボードの値を耐久度に代入
 execute store result entity @s SelectedItem.tag.Damage short 1 run scoreboard players get @s MAD_Durability
