@@ -41,9 +41,18 @@ execute if score drop_count MAD_Fortune matches 2 run summon minecraft:item ~ ~ 
 execute if score drop_count MAD_Fortune matches 3 run summon minecraft:item ~ ~ ~ {Motion:[0.0d,0.2d,0.0d],Item:{id:"minecraft:lapis_lazuli",Count:3}}
 execute if score drop_count MAD_Fortune matches 4 run summon minecraft:item ~ ~ ~ {Motion:[0.0d,0.2d,0.0d],Item:{id:"minecraft:lapis_lazuli",Count:4}}
 
+# 経験値オーブを召喚
+function orion.mineall:lapis_ore/store_exp_orb_ramdom
+execute if score @s MAD_Random matches 2 run function orion.mineall:summon_experience_orb_2
+execute if score @s MAD_Random matches 3 run function orion.mineall:summon_experience_orb_3
+execute if score @s MAD_Random matches 4 run function orion.mineall:summon_experience_orb_4
+execute if score @s MAD_Random matches 5 run function orion.mineall:summon_experience_orb_5
+
 # 自動アイテム収集
 execute if score gathering_items MAD_Setting matches 1 positioned ~ ~ ~ if entity @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:lapis_lazuli"}},limit=1] run tag @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:lapis_lazuli"}}] add gathering
 execute if score gathering_items MAD_Setting matches 1 run tp @e[type=minecraft:item,nbt={Age:0s,Item:{id:"minecraft:lapis_lazuli"}},tag=gathering] @s
+execute if score gathering_items MAD_Setting matches 1 positioned ~ ~ ~ if entity @e[type=minecraft:experience_orb,nbt={Age:0s},limit=1] run tag @e[type=minecraft:experience_orb,nbt={Age:0s}] add gathering
+execute if score gathering_items MAD_Setting matches 1 run tp @e[type=minecraft:experience_orb,nbt={Age:0s},tag=gathering] @s
 execute if score gathering_items MAD_Setting matches 1 run tag @a remove gathering
 
 execute if score lapis_ore MAD_InfDestFlg matches 1 run function orion.mineall:lapis_ore/detect_next_block
